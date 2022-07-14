@@ -1,0 +1,124 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F8ECD1;
+}
+
+body {
+    margin: 0px 30px 0px 30px;
+}
+
+body::-webkit-scrollbar, section::-webkit-scrollbar{
+    display: none;
+}
+//header
+header {
+    position: relative;
+    height: 50px;
+    border-bottom: 2px solid #AC7D88;
+    width: 100%;
+    display: inline-flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-title {
+    display: inline-flex;
+    height: 35px;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    min-width: 200px;
+    color: #85586F
+}
+
+.btn {
+    display: inline-flex;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    gap: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#save-product-btn, #cancel-product-btn{
+    box-shadow: 2px 2px 1px #AC7D88;
+    background-color: #DEB6AB;
+    color: #85586F;
+}
+//Body
+section {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.error-messenger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    p {
+        font-weight: bold;
+        text-align: left;
+        font-size: 1em;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        color: #85586F
+    }
+}
+
+#product_form {
+    padding: 20px 0px 20px 0px;
+}
+
+label, option, select {
+    color: #85586F;
+}
+
+input[type=text] {
+    color: #AC7D88;
+    border-width: 1px;
+}
+
+.data, .type-switcher {
+    padding-bottom: 20px;
+    margin-left: 10px;
+    display: grid;
+    width: 330px;
+    grid-template-columns: 100px 200px;
+    justify-content: space-between;
+}
+
+p {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    width: 330px;
+    font-size: 0.95rem;
+    color: #85586F;
+}
+
+.hide {
+    display: none !important;
+}
+//Footer
+footer {
+    position: relative;
+    border-top: 2px solid #AC7D88;
+    height: 50px;;
+    width: 100%;
+    display: inline-flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    p {
+        font-weight: bold;
+        text-align: center;
+        font-size: 1em;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        color: #85586F
+    }
+}
