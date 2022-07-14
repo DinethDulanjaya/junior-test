@@ -38,7 +38,7 @@ if(isset($_POST['saveButton']))
     }
 }
 ?>
-<link rel="stylesheet" href="styles/addpage.css">
+<link rel="stylesheet" href="styles/addPage.css">
 <title>Add Page</title>
 </head>
 <body>
