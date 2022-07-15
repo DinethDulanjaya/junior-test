@@ -38,7 +38,7 @@ class Validator extends Query implements validate
     }
     public function validateType($type)
     {
-        if (!((strlen($type) > 0) && (($type === "dvd") || ($type === "furniture") || ($type === "book"))))
+        if (!((strlen($type) > 0) && (($type === "DVD") || ($type === "Furniture") || ($type === "Book"))))
         {
             return true;
         }
