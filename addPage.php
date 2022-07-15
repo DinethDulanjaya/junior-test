@@ -14,19 +14,19 @@ if(isset($_POST['saveButton']))
     $name = $_POST['name'];
     $price = $_POST['price'];
     $type = $_POST['toggle'];
-    if ($_POST['toggle'] === 'dvd')
+    if ($_POST['toggle'] === 'DVD')
     {
         $size = $_POST['size'];
         $error_log = $validate->validateDisk($sku, $name, $price, $type, $size);
     }
-    else if ($_POST['toggle'] === 'furniture')
+    else if ($_POST['toggle'] === 'Furniture')
     {
         $length = $_POST['length'];
         $width = $_POST['width'];
         $height = $_POST['height'];
         $error_log = $validate->validateFurniture($sku, $name, $price, $type, $length, $width, $height);
     }
-    else if ($_POST['toggle'] === 'book') 
+    else if ($_POST['toggle'] === 'Book') 
     {
         $weight = $_POST['weight'];
         $error_log = $validate->validateBook($sku, $name, $price, $type, $weight);
@@ -68,13 +68,13 @@ if(isset($_POST['saveButton']))
                     <label for="Price">Price ($)</label>
                     <input type="text" name="price" id="price" placeholder="Enter Price">
                 </div>
-                <div class="type-switcher" id="productType">
-                     <label for="type">Type Switcher</label>
-                     <select class="div-toggle" name="toggle" data-target=".type-info">
+                <div class="type-switcher" id="productTypes">
+                     <label for="type">Product Type</label>
+                     <select id="productType" class="div-toggle" name="toggle" data-target=".type-info">
                         <option value="default" id="default" selected hidden>Select Type</option>
-                        <option value="dvd" id="dvd" data-show=".dvd">DVD</option>
-                        <option value="furniture" id="furniture" data-show=".furniture">Furniture</option>
-                        <option value="book" id="book" data-show=".book">Book</option>
+                        <option label="DVD" value="DVD" id="DVD" data-show=".dvd">DVD</option>
+                        <option label="Furniture" value="Furniture" id="Furniture" data-show=".furniture">Furniture</option>
+                        <option label="Book" value="Book" id="Book" data-show=".book">Book</option>
                       </select>
                 </div>
             </div>
