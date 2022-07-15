@@ -33,10 +33,15 @@ if(isset($_POST['deleteButton']))
         <form class="product-catalog" id="product_catalog" method="post">
             <!-- Location of item cards -->
             <?php
+            if (empty($query->showQuery())):
+                ?>
+                <h3>No items available</h3>
+                <?php
+            else:
             foreach($query->showQuery() as $data):
             ?>
             <div class="product-showcase">
-                <input class="delete-checkbox" type="checkbox" name="d_checkbox[]" value="<?php echo $data['sku'];?>" id="delete-checkbox">
+                <input class="delete-checkbox" text="<?php echo $data['sku'];?>" type="checkbox" name="d_checkbox[]" value="<?php echo $data['sku'];?>" id="delete-checkbox">
                 <div class="product-details">
                     <p><span><?php echo $data['sku']; ?></span></p>
                     <p><span><?php echo $data['name']; ?></span></p>
@@ -44,13 +49,13 @@ if(isset($_POST['deleteButton']))
                     <?php
                     switch ($data['type'])
                     {
-                        case "dvd":
+                        case "DVD":
                             echo "<p>Size: <span>". $data['attribute'] ."</span></p>";
                             break;
-                        case "book":
+                        case "Book":
                             echo "<p>Weight: <span>". $data['attribute'] ."</span></p>";
                             break;
-                        case "furniture":
+                        case "Furniture":
                             echo "<p>Dimensions: <span>". $data['attribute'] ."</span></p>";
                             break;
                     }
@@ -59,6 +64,7 @@ if(isset($_POST['deleteButton']))
             </div>
             <?php 
             endforeach; 
+            endif;
             ?>
         </form>
     </section>
